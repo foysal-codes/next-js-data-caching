@@ -1,14 +1,22 @@
+import Link from "next/link";
 import React from "react";
 
 const Navbar = () => {
   const links = (
     <>
       <li>
-        <a>Home</a>
+        <Link href="/">Home</Link>
       </li>
 
       <li>
-        <a>Dashboard</a>
+        <Link href="/dashboard"> Dashboard </Link>
+      </li>
+
+      <li>
+        <Link href="/about">About</Link>
+      </li>
+      <li>
+        <Link href="/posts">Post</Link>
       </li>
     </>
   );
@@ -42,7 +50,9 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <Link href="/" className="btn btn-ghost text-xl">
+          daisyUI
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
